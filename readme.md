@@ -1,4 +1,4 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<p align="center"><img src="http://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 ## About Project:
 Project demo available at : <a href="https://ak-laravel.project.zone">Live Site</a>.
