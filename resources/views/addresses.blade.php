@@ -1,17 +1,20 @@
-<link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
-<?php echo View::make('navbar') ?>
+<!DOCTYPE html>
+<html><head>
+	<link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
+<?php echo View::make('navbar') ?><br><p></p><p></p>
 <h1>Address Book</h1>
 @if(Session::has('flash_message'))
     <div class="alert alert-success">
         {{ Session::get('flash_message') }}
     </div>
-@endif
-{{Form::open(['url'=>asset('address/filter/')])}}
-{{Form::label('filter', 'Filter By: ')}}
-{{Form::text('filter',null,['class'=>'form-control input filter'])}}
+@endif</head><body>
+	
+{{Form::open(['url'=>asset('address/filter/')],['class'=>'form-control'])}}
+{{Form::label('filter','Search: ',['class'=>'form-group'])	}}
+{{Form::text('filter',null,['class'=>'input form-group'])}}
 {{Form::close()}}<p><br></br></p>
-<table>
-    <tr style="background-color: lightgrey; color: black;">
+<table class='table'>
+    <tr style="background-color: smoke; color: black;">
     <td>Actions</td>
         <td><a href="{{asset('address/sort/name')}}">Name</a></td>
         <td><a href="{{asset('address/sort/addrs1')}}">Add1</a></td>
@@ -25,7 +28,7 @@
         <tr>
         <td>
             <a href="{{asset('address/edit/'.$address1->id)}}"><button class='btn btn-xs btn-primary'>Edit</button></a>
-            <a href="{{asset('address/delete/'.$address1->id)}}"><button class='btn btn-xs btn-danger'>Delete</button></a>
+            <a href="{{asset('address/delete/'.$address1->id)}}"><button style="margin-left:2px;" class='btn btn-xs btn-danger'>X</button></a>
 
             </div>
         <td>
@@ -53,3 +56,5 @@
         </tr>
 @endforeach
 </table>
+</body>
+</html>

@@ -9,7 +9,7 @@ class Address extends Model
 {
     use Notifiable;
     protected $fillable = [
-        'name', 'addrs1','zip','city','tel'
+        'name', 'addrs1','zip','city','tel','state'
     ];
 
 }

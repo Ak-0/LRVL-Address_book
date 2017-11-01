@@ -25,23 +25,8 @@ use App\User;
 });*/
 
 Route::get('/', function () {
-/*
-    $painting = new \App\Painting();
-    $painting->title = 'Do No Wrong';
-    $painting->artist = 'Do right';
-    $painting->year = 2017;
-    $painting->save();
-*/
-   // $cities = ['Miami Beach','Orlando','West PalmBeach', 'Tallahasee',''];
     $addresses=\App\Address::all();
     return View('addresses',['address'=>$addresses]);
-
-/*
-    $painting = \App\Painting::find(1);
-    $painting->title = 'Do No Wrong - Just Right';
-    $painting->save();
-    return $painting->title;
-*/
 
     /*Schema::table('art', function($newtable){
             $newtable->increments('id');
@@ -106,3 +91,17 @@ Route::get('/', function () {
         'as' => 'address.edit',
         'uses' => 'Address@edit_address'
     ]);*/
+
+//THE ADDRESSES APP 2
+        Route::get('address2', ['uses' => 'Address2@index']);
+  //    Route::get('add_address', ['uses' => 'Addresses@add_address']);
+  //    Route::post('add_address', ['uses' => 'Addresses@add_address']);
+
+      Route::get('edit/{id}', ['uses' => 'Address2@edit']);
+      Route::post('edit/{id}', ['uses' => 'Address2@edit']);
+
+      Route::get('delete/{id}', ['uses' => 'Address2@delete']);
+
+      Route::get('sort/{any}', ['uses' => 'Address2@sort']);
+
+  //    Route::post('address/filter/', ['uses' => 'Addresses@filter']);
