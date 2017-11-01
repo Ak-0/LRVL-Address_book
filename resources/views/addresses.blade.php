@@ -13,17 +13,17 @@
 {{Form::label('filter','Search: ',['class'=>'form-group'])	}}
 {{Form::text('filter',null,['class'=>'input form-group'])}}
 {{Form::close()}}<p><br></br></p>
-<table class='table'>
+<table class='table' style="max-width:90%;">
     <tr style="background-color: smoke; color: black;">
-    <td>Actions</td>
+   <thead> <td>Actions</td>
         <td><a href="{{asset('address/sort/name')}}">Name</a></td>
         <td><a href="{{asset('address/sort/addrs1')}}">Add1</a></td>
         <td><a href="{{asset('address/sort/addrs2')}}">Add2</a></td>
         <td><a href="{{asset('address/sort/zip')}}">Zip</a></td>
         <td><a href="{{asset('address/sort/city')}}">City</a></td>
         <td><a href="{{asset('address/sort/state')}}">state</a></td>
-        <td><a href="#">Tel</a></td>
-</tr>
+        <td><a href="#">Tel</a></td></thead>
+</tr><tbody>
 @foreach($address as $address1)
         <tr>
         <td>
@@ -55,6 +55,7 @@
         </td>
         </tr>
 @endforeach
+</tbody>
 </table>
 </body>
 </html>
