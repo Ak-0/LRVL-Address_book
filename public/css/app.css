@@ -9,6 +9,21 @@
 .label, sub, sup {
     vertical-align: baseline
 }
+.links.navbar > a {
+    color: #3097D1;
+    background: whitesmoke;
+    border-radius: 20px;
+    padding: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-bottom: -10px;
+    border-top: 2px solid gray;
+    background-color: aliceblue;
+}
+
+.links.navbar > a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
 
 hr, img {
     border: 0
