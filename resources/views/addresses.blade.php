@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html><head>
 	<link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
-<?php echo View::make('navbar') ?><br><p></p><p></p>
-<h1>Address Book</h1>
-@if(Session::has('flash_message'))
-    <div class="alert alert-success">
-        {{ Session::get('flash_message') }}
-    </div>
-@endif</head><body>
+	<?php echo View::make('navbar') ?>
+	<div>
+		<div style="width: 27%;float: left;">
+			<h1>Address Book</h1>
+		</div>
+		
+		<div style="clear: unset;float: right;display: inline;margin-right: 55%;margin-top: 27px;">	
+		{{Form::open(['url'=>asset('address/filter/')],['class'=>'form-control'])}}
+		{{Form::label('filter','Search: ',['class'=>'form-group'])	}}
+		{{Form::text('filter',null,['class'=>'input form-group'])}}
+		{{Form::close()}}
+		</div>
 	
-{{Form::open(['url'=>asset('address/filter/')],['class'=>'form-control'])}}
-{{Form::label('filter','Search: ',['class'=>'form-group'])	}}
-{{Form::text('filter',null,['class'=>'input form-group'])}}
-{{Form::close()}}<p><br></br></p>
+	</div>
+	
+	@if(Session::has('flash_message'))
+		<div class="alert alert-success">
+			{{ Session::get('flash_message') }}
+		</div>
+	@endif
+
+
+</head>
+
+<body>
+
+
+
+
 <table class='table' style="max-width:90%;">
     <tr style="background-color: smoke; color: black;">
    <thead> <td>Actions</td>
