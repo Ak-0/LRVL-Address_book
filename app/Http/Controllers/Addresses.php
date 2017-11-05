@@ -28,7 +28,7 @@ class Addresses extends Controller
             ]);
             $input = $request->all();
             Address::create($input);
-            Session::flash('flash_message', 'successfully added!');
+            Session::flash('flash_message', 'Successfully Added!');
 
             /*
             $address = new \App\Address();
@@ -42,9 +42,11 @@ class Addresses extends Controller
             $address->save();*/
 
 
-            $addresses = Address::all();
+            //$addresses = Address::all();
+			return redirect()->action('Addresses@index');
+
             //$addresses = DB::table('addresses')->get();
-            return view('addresses')->with('address',$addresses);
+            //return view('addresses')->with('address',$addresses);
         }
         else{
             return view('add_address');
@@ -68,17 +70,22 @@ class Addresses extends Controller
             $address->city = Input::get('city');
             $address->state = Input::get('state');
             $address->update();
-            $addresses = DB::table('addresses')->get();
-            return view('addresses')->with('address',$addresses);
+			Session::flash('flash_message', 'Successfull Edit!');
+			return redirect()->action('Addresses@index');
+
+           // $addresses = DB::table('addresses')->get();
+           //return view('addresses')->with('address',$addresses);
         }
 
     public function delete($id)
     {
         Address::destroy($id);
         Session::flash('flash_message', 'successfully Deleted!');
+		return redirect()->action('Addresses@index');
+
         //$address = DB::table('addresses')->where('id', '=', $id)->delete();
-        $addresses = Address::all();
-        return view('addresses')->with('address',$addresses);
+        //$addresses = Address::all();
+        //return view('addresses')->with('address',$addresses);
     }
 
 
@@ -86,22 +93,22 @@ class Addresses extends Controller
         switch($key) {
 
             case 'name':
-                $addresses = DB::table('addresses')->orderBy('name')->get();
+                $addresses = DB::table('addresses')->orderBy('name')->paginate(7);
                 break;
             case 'addrs1':
-                $addresses = DB::table('addresses')->orderBy('addrs1')->get();
+                $addresses = DB::table('addresses')->orderBy('addrs1')->paginate(7);
                 break;
             case 'addrs2':
-                $addresses = DB::table('addresses')->orderBy('addrs2')->get();
+                $addresses = DB::table('addresses')->orderBy('addrs2')->paginate(7);
                 break;
             case 'zip':
-                $addresses = DB::table('addresses')->orderBy('zip')->get();
+                $addresses = DB::table('addresses')->orderBy('zip')->paginate(7);
                 break;
             case 'state':
-                $addresses = DB::table('addresses')->orderBy('state')->get();
+                $addresses = DB::table('addresses')->orderBy('state')->paginate(7);
                 break;
             case 'city':
-                $addresses = DB::table('addresses')->orderBy('city')->get();
+                $addresses = DB::table('addresses')->orderBy('city')->paginate(7);
                 break;
             }
           return view('addresses')->with('address',$addresses);
@@ -117,9 +124,9 @@ class Addresses extends Controller
                 $query->orWhere($col, 'LIKE', '%' . $value . '%');
             }
 
-            $addresses = $query->get();
+            $addresses = $query->paginate(7);
 
-            return view('addresses')->with('address',$addresses);
+			return view('addresses')->with('address',$addresses);
 
         }
 

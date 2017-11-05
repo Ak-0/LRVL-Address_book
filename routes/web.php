@@ -1,9 +1,7 @@
 <?php
 use App\User;
-	Route::get('/', function () {
-		$addresses=\App\Address::all();
-		return View('addresses',['address'=>$addresses]);
-	});
+
+	Route::get('/',  ['uses' => 'Addresses@index']	);
 
 
 //THE ADDRESSES APP
