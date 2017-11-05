@@ -12,8 +12,8 @@ class Addresses extends Controller
 {
 
     public function index(){
-       $addresses = Address::all();
-           // $addresses = DB::table('addresses')->get();
+       //$addresses = Address::all();
+        $addresses = DB::table('addresses')->paginate(7);
         return view('addresses')->with('address',$addresses);
     }
 

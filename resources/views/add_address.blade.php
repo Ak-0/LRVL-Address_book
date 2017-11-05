@@ -17,6 +17,7 @@
 </head>
 <body>
 <div class="flex-center position-ref full-height">
+<!--
     @if (Route::has('login'))
         <div class="top-right links">
             @if (Auth::check())
@@ -27,6 +28,8 @@
             @endif
         </div>
     @endif
+-->
+
 
     <div class="content container">
         <div class="form-group col-sm-auto ">
@@ -71,7 +74,12 @@
             <br>
                 <center>
             {{Form::submit('Submit',['class'=>'btn btn-large btn-primary']) }}
-            {{Form::reset('Clear',['class' => 'btn btn-large btn-danger']) }}
+                        @if(!isset($address))
+							{{Form::reset('Clear',['class' => 'btn btn-large btn-danger']) }}
+						@elseif(isset($address))
+							<a href="{{asset('address/delete/'.$address->id)}}" class="btn btn-large btn-danger">Delete</a>
+						@endif
+
                 </center>
             {{ Form::close() }}
 

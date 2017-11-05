@@ -9,6 +9,15 @@
 .label, sub, sup {
     vertical-align: baseline
 }
+
+.withfadeout {
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -ms-transition: all 2s ease-out;
+  -o-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+
 .links.navbar > a {
     color: #3097D1;
     background: whitesmoke;
@@ -21,8 +30,8 @@
     background-color: aliceblue;
 }
 
-.links.navbar > a:hover {
-    background: rgba(0, 0, 0, 0.1);
+.active {
+    font-weight: bolder;
 }
 
 hr, img {
