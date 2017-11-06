@@ -10,13 +10,7 @@
     vertical-align: baseline
 }
 
-.withfadeout {
-  -webkit-transition: all 2s ease-out;
-  -moz-transition: all 2s ease-out;
-  -ms-transition: all 2s ease-out;
-  -o-transition: all 2s ease-out;
-  transition: all 2s ease-out;
-}
+
 
 .links.navbar > a {
     color: #3097D1;
@@ -30,9 +24,6 @@
     background-color: aliceblue;
 }
 
-.active {
-    font-weight: bolder;
-}
 
 hr, img {
     border: 0
@@ -82,8 +73,10 @@ a {
     background-color: transparent
 }
 
-a:active, a:hover {
-    outline: 0
+a:active, a:hover, a.active {
+    outline: 1;
+    font-weight: bolder;
+
 }
 
 b, optgroup, strong {
@@ -186,10 +179,7 @@ table {
 
 }
 .filter{
-    float: left;
-    width: 10% !important;
-    margin: 0px auto 0px 40px !important;
-    position: absolute;
+    
 }
 td, th {
     padding: 15;
@@ -281,8 +271,8 @@ td, th {
 
 @font-face {
     font-family: 'Glyphicons Halflings';
-    src: url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1);
-    src: url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1?#iefix) format("embedded-opentype"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff2?448c34a56d699c29117adc64c43affeb) format("woff2"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff?fa2772327f55d8198301fdb8bcfc8158) format("woff"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.ttf?e18bbf611f2a2e43afc071aa2f4e1512) format("truetype"), url(/fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.svg?89889688147bd7575d6327160d64e760#glyphicons_halflingsregular) format("svg")
+    src: url(../fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1);
+    src: url(../fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1?#iefix) format("embedded-opentype"), url(../fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff2?448c34a56d699c29117adc64c43affeb) format("woff2"), url(../fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.woff?fa2772327f55d8198301fdb8bcfc8158) format("woff"), url(../fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.ttf?e18bbf611f2a2e43afc071aa2f4e1512) format("truetype"), url(../fonts/vendor/bootstrap-sass/bootstrap/glyphicons-halflings-regular.svg?89889688147bd7575d6327160d64e760#glyphicons_halflingsregular) format("svg")
 }
 
 .glyphicon {
@@ -2403,201 +2393,201 @@ pre code {
     }
 
     .col-md-push-8 {
-        left: 66.66666667%
+        left: 66.66666667%;
     }
 
     .col-md-push-9 {
-        left: 75%
+        left: 75%;
     }
 
     .col-md-push-10 {
-        left: 83.33333333%
+        left: 83.33333333%;
     }
 
     .col-md-push-11 {
-        left: 91.66666667%
+        left: 91.66666667%;
     }
 
     .col-md-push-12 {
-        left: 100%
+        left: 100%;
     }
 
     .col-md-offset-0 {
-        margin-left: 0
+        margin-left: 0;
     }
 
     .col-md-offset-1 {
-        margin-left: 8.33333333%
+        margin-left: 8.33333333%;
     }
 
     .col-md-offset-2 {
-        margin-left: 16.66666667%
+        margin-left: 16.66666667%;
     }
 
     .col-md-offset-3 {
-        margin-left: 25%
+        margin-left: 25%;
     }
 
     .col-md-offset-4 {
-        margin-left: 33.33333333%
+        margin-left: 33.33333333%;
     }
 
     .col-md-offset-5 {
-        margin-left: 41.66666667%
+        margin-left: 41.66666667%;
     }
 
     .col-md-offset-6 {
-        margin-left: 50%
+        margin-left: 50%;
     }
 
     .col-md-offset-7 {
-        margin-left: 58.33333333%
+        margin-left: 58.33333333%;
     }
 
     .col-md-offset-8 {
-        margin-left: 66.66666667%
+        margin-left: 66.66666667%;
     }
 
     .col-md-offset-9 {
-        margin-left: 75%
+        margin-left: 75%;
     }
 
     .col-md-offset-10 {
-        margin-left: 83.33333333%
+        margin-left: 83.33333333%;
     }
 
     .col-md-offset-11 {
-        margin-left: 91.66666667%
+        margin-left: 91.66666667%;
     }
 
     .col-md-offset-12 {
-        margin-left: 100%
+        margin-left: 100%;
     }
 }
 
 @media (min-width: 1200px) {
     .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9 {
-        float: left
+        float: left;
     }
 
     .col-lg-1 {
-        width: 8.33333333%
+        width: 8.33333333%;
     }
 
     .col-lg-2 {
-        width: 16.66666667%
+        width: 16.66666667%;
     }
 
     .col-lg-3 {
-        width: 25%
+        width: 25%;
     }
 
     .col-lg-4 {
-        width: 33.33333333%
+        width: 33.33333333%;
     }
 
     .col-lg-5 {
-        width: 41.66666667%
+        width: 41.66666667%;
     }
 
     .col-lg-6 {
-        width: 50%
+        width: 50%;
     }
 
     .col-lg-7 {
-        width: 58.33333333%
+        width: 58.33333333%;
     }
 
     .col-lg-8 {
-        width: 66.66666667%
+        width: 66.66666667%;
     }
 
     .col-lg-9 {
-        width: 75%
+        width: 75%;
     }
 
     .col-lg-10 {
-        width: 83.33333333%
+        width: 83.33333333%;
     }
 
     .col-lg-11 {
-        width: 91.66666667%
+        width: 91.66666667%;
     }
 
     .col-lg-12 {
-        width: 100%
+        width: 100%;
     }
 
     .col-lg-pull-0 {
-        right: auto
+        right: auto;
     }
 
     .col-lg-pull-1 {
-        right: 8.33333333%
+        right: 8.33333333%;
     }
 
     .col-lg-pull-2 {
-        right: 16.66666667%
+        right: 16.66666667%;
     }
 
     .col-lg-pull-3 {
-        right: 25%
+        right: 25%;
     }
 
     .col-lg-pull-4 {
-        right: 33.33333333%
+        right: 33.33333333%;
     }
 
     .col-lg-pull-5 {
-        right: 41.66666667%
+        right: 41.66666667%;
     }
 
     .col-lg-pull-6 {
-        right: 50%
+        right: 50%;
     }
 
     .col-lg-pull-7 {
-        right: 58.33333333%
+        right: 58.33333333%;
     }
 
     .col-lg-pull-8 {
-        right: 66.66666667%
+        right: 66.66666667%;
     }
 
     .col-lg-pull-9 {
-        right: 75%
+        right: 75%;
     }
 
     .col-lg-pull-10 {
-        right: 83.33333333%
+        right: 83.33333333%;
     }
 
     .col-lg-pull-11 {
-        right: 91.66666667%
+        right: 91.66666667%;
     }
 
     .col-lg-pull-12 {
-        right: 100%
+        right: 100%;
     }
 
     .col-lg-push-0 {
-        left: auto
+        left: auto;
     }
 
     .col-lg-push-1 {
-        left: 8.33333333%
+        left: 8.33333333%;
     }
 
     .col-lg-push-2 {
-        left: 16.66666667%
+        left: 16.66666667%;
     }
 
     .col-lg-push-3 {
-        left: 25%
+        left: 25%;
     }
 
     .col-lg-push-4 {
-        left: 33.33333333%
+        left: 33.33333333%;
     }
 
     .col-lg-push-5 {
@@ -2605,139 +2595,139 @@ pre code {
     }
 
     .col-lg-push-6 {
-        left: 50%
+        left: 50%;
     }
 
     .col-lg-push-7 {
-        left: 58.33333333%
+        left: 58.33333333%;
     }
 
     .col-lg-push-8 {
-        left: 66.66666667%
+        left: 66.66666667%;
     }
 
     .col-lg-push-9 {
-        left: 75%
+        left: 75%;
     }
 
     .col-lg-push-10 {
-        left: 83.33333333%
+        left: 83.33333333%;
     }
 
     .col-lg-push-11 {
-        left: 91.66666667%
+        left: 91.66666667%;
     }
 
     .col-lg-push-12 {
-        left: 100%
+        left: 100%;
     }
 
     .col-lg-offset-0 {
-        margin-left: 0
+        margin-left: 0;
     }
 
     .col-lg-offset-1 {
-        margin-left: 8.33333333%
+        margin-left: 8.33333333%;
     }
 
     .col-lg-offset-2 {
-        margin-left: 16.66666667%
+        margin-left: 16.66666667%;
     }
 
     .col-lg-offset-3 {
-        margin-left: 25%
+        margin-left: 25%;
     }
 
     .col-lg-offset-4 {
-        margin-left: 33.33333333%
+        margin-left: 33.33333333%;
     }
 
     .col-lg-offset-5 {
-        margin-left: 41.66666667%
+        margin-left: 41.66666667%;
     }
 
     .col-lg-offset-6 {
-        margin-left: 50%
+        margin-left: 50%;
     }
 
     .col-lg-offset-7 {
-        margin-left: 58.33333333%
+        margin-left: 58.33333333%;
     }
 
     .col-lg-offset-8 {
-        margin-left: 66.66666667%
+        margin-left: 66.66666667%;
     }
 
     .col-lg-offset-9 {
-        margin-left: 75%
+        margin-left: 75%;
     }
 
     .col-lg-offset-10 {
-        margin-left: 83.33333333%
+        margin-left: 83.33333333%;
     }
 
     .col-lg-offset-11 {
-        margin-left: 91.66666667%
+        margin-left: 91.66666667%;
     }
 
     .col-lg-offset-12 {
-        margin-left: 100%
+        margin-left: 100%;
     }
 }
 
 caption {
     padding-top: 8px;
     padding-bottom: 8px;
-    color: #777
+    color: #777;
 }
 
 .table {
     width: 100%;
-    margin-bottom: 22px
+    margin-bottom: 22px;
 }
 
 .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
     padding: 8px;
     line-height: 1.6;
     vertical-align: top;
-    border-top: 1px solid #ddd
+    border-top: 1px solid #ddd;
 }
 
 .table > thead > tr > th {
     vertical-align: bottom;
-    border-bottom: 2px solid #ddd
+    border-bottom: 2px solid #ddd;
 }
 
 .table > caption + thead > tr:first-child > td, .table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > td, .table > thead:first-child > tr:first-child > th {
-    border-top: 0
+    border-top: 0;
 }
 
 .table > tbody + tbody {
-    border-top: 2px solid #ddd
+    border-top: 2px solid #ddd;
 }
 
 .table .table {
-    background-color: #f5f8fa
+    background-color: #f5f8fa;
 }
 
 .table-condensed > tbody > tr > td, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > td, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > thead > tr > th {
-    padding: 5px
+    padding: 5px;
 }
 
 .table-bordered, .table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
-    border: 1px solid #ddd
+    border: 1px solid #ddd;
 }
 
 .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
-    border-bottom-width: 2px
+    border-bottom-width: 2px;
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-    background-color: #f9f9f9
+    background-color: #f9f9f9;
 }
 
 .table-hover > tbody > tr:hover, .table > tbody > tr.active > td, .table > tbody > tr.active > th, .table > tbody > tr > td.active, .table > tbody > tr > th.active, .table > tfoot > tr.active > td, .table > tfoot > tr.active > th, .table > tfoot > tr > td.active, .table > tfoot > tr > th.active, .table > thead > tr.active > td, .table > thead > tr.active > th, .table > thead > tr > td.active, .table > thead > tr > th.active {
-    background-color: #f5f5f5
+    background-color: #f5f5f5;
 }
 
 table col[class*=col-] {

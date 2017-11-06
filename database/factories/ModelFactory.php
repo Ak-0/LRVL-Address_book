@@ -27,14 +27,16 @@
 
 $factory->define( \App\Address::class, function (Faker\Generator $faker) {
 
+$Lfaker = Faker\Factory::create("en_NG");
+
     return[
-        'name'=> $faker->name,
-        'tel'=> $faker->phoneNumber,
-        'addrs1'=> $faker->streetAddress,
-        'addrs2'=>$faker->buildingNumber,
-        'zip'=> $faker->postcode,
-        'city'=> $faker->city,
-        'state'=>$faker->state
+        'name'=> $Lfaker->name,
+        'tel'=> $Lfaker->phoneNumber,
+        'addrs1'=> $Lfaker->streetAddress,
+        'addrs2'=>$Lfaker->buildingNumber,
+        'zip'=> $Lfaker->postcode,
+        'city'=> $Lfaker->city,
+        'state'=>$Lfaker->region
     ];
 
 

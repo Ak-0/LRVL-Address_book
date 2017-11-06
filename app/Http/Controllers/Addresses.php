@@ -124,7 +124,7 @@ class Addresses extends Controller
                 $query->orWhere($col, 'LIKE', '%' . $value . '%');
             }
 
-            $addresses = $query->paginate(7);
+            $addresses = $query->paginate(80);
 
 			return view('addresses')->with('address',$addresses);
 

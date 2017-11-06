@@ -5,7 +5,7 @@
 <div class="navbar navbar-default " style="display: flex;padding: 10px;list-style-type:none;border-bottom: 2px solid black;>
 	<ul class="nav navbar-nav">  
 		<li><div class="navbar-header">Lrvl-Address Book Demo</div></li>
-		<li class="{{Request::path() == 'address' ? 'active' : ''}}"><a style="padding:10px;margin-left:10px;" href="{{asset('address')}}">Home</a></li>
-		<li class="{{Request::path() == 'add_address' ? 'active' : ''}}"><a style="padding:10px;margin-left:10px;" href="{{asset('add_address')}}">Add</a></li>
+		<li><a  class="{{Request::path() == 'address' ? 'active' : ''}}" style="padding:10px;margin-left:10px;" href="{{asset('address')}}">Home</a></li>
+		<li><a class="{{Request::path() == 'add_address' ? 'active' : ''}}" style="padding:10px;margin-left:10px;" href="{{asset('add_address')}}">Add</a></li>
 	</ul>
 </div>
