@@ -15,7 +15,7 @@
 	<script>
 	$(document).ready(function() {
 	// fade out flash 'success' messages
-	$('.alert.alert-success').delay(500).hide(1500);
+	$('.alert.alert-info').delay(500).hide(1500);
 	});
 	</script>
 
@@ -25,7 +25,7 @@
 <body>
 
 	@if(Session::has('flash_message'))
-		<div class="alert alert-success withfadeout">
+		<div class="alert alert-info withfadeout">
 			{{ Session::get('flash_message') }}
 		</div>
 	@endif
@@ -33,7 +33,7 @@
 
 	<table class="table table-hover table-responsive table-striped" style="max-width:90%;">
 	<thead>
-	    <tr class="info">
+	    <tr class="">
 		<th></th>
         <th><a href="{{asset('address/sort/name')}}">Name</a></th>
         <th><a href="{{asset('address/sort/addrs1')}}">Add1</a></th>
