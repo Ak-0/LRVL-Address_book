@@ -50,7 +50,8 @@
         <tr>
         <td>
             <a href="{{asset('address/edit/'.$address1->id)}}">
-            <button class='btn btn-xs btn-primary'>Edit</button>
+            <center><div class='btn btn-lg btn-primary'><i class="fa fa-address-card" aria-hidden="true"></i>
+            </div></center>
             </a>
 		</td>
         <td>{{$address1->name}}</td>
