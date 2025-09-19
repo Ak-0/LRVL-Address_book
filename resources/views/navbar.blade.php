@@ -16,6 +16,6 @@
 					</div>
 				</li>
 
-		<li><a class="{{Request::path() == 'add_address' ? 'active' : ''}} links" style="padding:10px;margin-left:10px;" href="{{asset('add_address')}}"> New Address</a></li>
+		<li><a class="{{Request::path() == 'add_address' ? 'active' : ''}} links" style="padding:10px;margin-left:10px;" href="/add_address"> New Address</a></li>
 	</ul>
 </div>

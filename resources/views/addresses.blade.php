@@ -4,10 +4,10 @@
 	<?php echo View::make('navbar') ?>
 	<div>
 		<div style="clear: unset;float: right;display: inline;margin-right: 10%;margin-top: 27px;">	
-		{{Form::open(['url'=>asset('address/filter/')],['class'=>'form-control'])}}
+	<!--	{{Form::open(['url'=>asset('address/filter/')],['class'=>'form-control'])}}
 		{{Form::label('filter','Search: ',['class'=>'form-group'])	}}
 		{{Form::text('filter',null,['class'=>'input form-group'])}}
-		{{Form::close()}}
+		{{Form::close()}}-->
 		</div>
 	
 	</div>
@@ -72,4 +72,5 @@
 	</center>
 
 </body>
+ <center>Made by <a href="https://github.com/Ak-0">Ak-0</a> 2017 - 2026</center>
 </html>
